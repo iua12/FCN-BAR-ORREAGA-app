@@ -46,6 +46,8 @@ jobs:
             echo "Sin cambios en FS5"
           else
             git commit -m "Actualizar calendario FS5"
+            # Si alguien subió algo mientras corría el job, se coloca nuestro commit encima
+            git pull --rebase origin main
             git push
           fi
 
