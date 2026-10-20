@@ -2,10 +2,10 @@ name: Resumen de asistencia
 
 on:
   schedule:
-    # Viernes a las 08:00 de Pamplona: 06:00 UTC en horario de verano, 07:00 UTC en invierno.
+    # Jueves a las 20:00 de Pamplona: 18:00 UTC en horario de verano, 19:00 UTC en invierno.
     # Corren las dos y el primer paso descarta la que no toca.
-    - cron: "0 6 * * 5"
-    - cron: "0 7 * * 5"
+    - cron: "0 18 * * 4"
+    - cron: "0 19 * * 4"
   workflow_dispatch: {}
 
 permissions:
@@ -26,8 +26,8 @@ jobs:
         run: |
           verano=$([ "$(TZ=Europe/Madrid date +%z)" = "+0200" ] && echo si || echo no)
           case "${{ github.event_name }}/${{ github.event.schedule }}/$verano" in
-            workflow_dispatch/*|schedule/"0 6 * * 5"/si|schedule/"0 7 * * 5"/no) echo "seguir=si" >> "$GITHUB_OUTPUT" ;;
-            *) echo "No es la ejecución de las 08:00 de Pamplona; se omite." ;;
+            workflow_dispatch/*|schedule/"0 18 * * 4"/si|schedule/"0 19 * * 4"/no) echo "seguir=si" >> "$GITHUB_OUTPUT" ;;
+            *) echo "No es la ejecución de las 20:00 de Pamplona; se omite." ;;
           esac
 
       - uses: actions/checkout@v4
