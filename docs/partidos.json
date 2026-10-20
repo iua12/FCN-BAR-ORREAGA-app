@@ -57,6 +57,10 @@
   }
  ],
  "campos": {
+  "2": {
+   "nombre": "SDC Echavacoiz",
+   "direccion": "C/ San Raimundo s/n, trasera 31009-Pamplona , 42.801733495092435, -1.6718974203654333"
+  },
   "22": {
    "nombre": "Colegio Hilarión Eslava",
    "direccion": "Paseo de la Paz s/n, 31600-Burlada"
@@ -75,9 +79,11 @@
    "estado": "jugado",
    "goles_favor": 10,
    "goles_contra": 1,
-   "arbitros": [],
+   "arbitros": [
+    "A23 Jose Antonio Piñar Viñas"
+   ],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16802",
-   "direccion": ""
+   "direccion": "C/ San Raimundo s/n, trasera 31009-Pamplona , 42.801733495092435, -1.6718974203654333"
   },
   {
    "id": 16808,
@@ -127,7 +133,7 @@
    "goles_contra": null,
    "arbitros": [],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16821",
-   "direccion": ""
+   "direccion": "C/ San Raimundo s/n, trasera 31009-Pamplona , 42.801733495092435, -1.6718974203654333"
   },
   {
    "id": 16827,
@@ -191,7 +197,7 @@
    "goles_contra": null,
    "arbitros": [],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16847",
-   "direccion": ""
+   "direccion": "C/ San Raimundo s/n, trasera 31009-Pamplona , 42.801733495092435, -1.6718974203654333"
   },
   {
    "id": 16853,
@@ -351,7 +357,7 @@
    "goles_contra": null,
    "arbitros": [],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16906",
-   "direccion": ""
+   "direccion": "C/ San Raimundo s/n, trasera 31009-Pamplona , 42.801733495092435, -1.6718974203654333"
   },
   {
    "id": 16913,
@@ -418,5 +424,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-10-20T11:43:16Z"
+ "actualizado": "2026-10-20T13:00:46Z"
 }
