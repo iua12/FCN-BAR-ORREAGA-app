@@ -208,9 +208,9 @@
    "rival": "Nueva Generación",
    "campo_id": 22,
    "lugar": "Colegio Hilarión Eslava",
-   "estado": "programado",
-   "goles_favor": null,
-   "goles_contra": null,
+   "estado": "jugado",
+   "goles_favor": 3,
+   "goles_contra": 0,
    "arbitros": [],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16853",
    "direccion": "Paseo de la Paz s/n, 31600-Burlada"
@@ -424,5 +424,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-10-20T13:00:46Z"
+ "actualizado": "2026-10-20T20:17:26Z"
 }
