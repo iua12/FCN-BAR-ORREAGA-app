@@ -16,6 +16,8 @@ alter table public.asistencia enable row level security;
 drop policy if exists "lectura publica" on public.asistencia;
 create policy "lectura publica" on public.asistencia
   for select to anon, authenticated using (true);
+-- Los proyectos nuevos no dan permisos de tabla a anon por defecto: sin esto la política no basta.
+grant select on public.asistencia to anon, authenticated;
 
 -- Ajustes privados (el PIN). Sin políticas: la clave pública no puede leerla.
 create table if not exists public.ajustes (
