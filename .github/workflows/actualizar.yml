@@ -1,0 +1,64 @@
+name: Actualizar calendario
+
+on:
+  schedule:
+    # 07:17 y 17:17 (hora de Pamplona en invierno; UTC+1). Minutos impares para evitar colas.
+    - cron: "17 6,16 * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["docs/**", "scripts/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: actualizar
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Descargar datos de FS5
+        run: python scripts/fetch.py
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "orreaga-bot"
+          git config user.email "orreaga-bot@users.noreply.github.com"
+          git add docs/partidos.json docs/calendario.ics
+          if git diff --cached --quiet; then
+            echo "Sin cambios en FS5"
+          else
+            git commit -m "Actualizar calendario FS5"
+            git push
+          fi
+
+      # El plan gratuito de Supabase pausa proyectos sin actividad; una lectura diaria lo mantiene vivo.
+      - name: Mantener Supabase activo
+        if: env.SUPABASE_URL != ''
+        run: |
+          curl -fsS "$SUPABASE_URL/rest/v1/asistencia?select=partido_id&limit=1" \
+            -H "apikey: $SUPABASE_KEY" -H "Authorization: Bearer $SUPABASE_KEY" > /dev/null
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deploy
+        uses: actions/deploy-pages@v4

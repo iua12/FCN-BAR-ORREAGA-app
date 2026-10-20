@@ -1,0 +1,379 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FCN Bar Orreaga//Calendario FS5//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FCN Bar Orreaga
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:Europe/Madrid
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:fs5-match-16802@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20261018T190000
+DTEND;TZID=Europe/Madrid:20261018T195000
+SUMMARY:⚽ Fatos FC vs FCN Bar Orreaga (10-1)
+LOCATION:SDC Echavacoiz\, Navarra
+DESCRIPTION:Jornada 1 · Visitante\nÁrbitro: pendiente de asignar\nhttps:/
+ /www.fs5navarra.es/tournaments/143/matches/16802
+URL:https://www.fs5navarra.es/tournaments/143/matches/16802
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16808@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20261025T090000
+DTEND;TZID=Europe/Madrid:20261025T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Diablo Academy
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 2 · Local\nÁrbitro: A05 Jose Javier Fernandez\nhttps:
+ //www.fs5navarra.es/tournaments/143/matches/16808
+URL:https://www.fs5navarra.es/tournaments/143/matches/16808
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16814@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20261108T090000
+DTEND;TZID=Europe/Madrid:20261108T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Jalaman FC
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 3 · Local\nÁrbitro: pendiente de asignar\nhttps://www
+ .fs5navarra.es/tournaments/143/matches/16814
+URL:https://www.fs5navarra.es/tournaments/143/matches/16814
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16821@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20261115T130000
+DTEND;TZID=Europe/Madrid:20261115T135000
+SUMMARY:⚽ Perico Pin Pin vs FCN Bar Orreaga
+LOCATION:SDC Echavacoiz\, Navarra
+DESCRIPTION:Jornada 4 · Visitante\nÁrbitro: pendiente de asignar\nhttps:/
+ /www.fs5navarra.es/tournaments/143/matches/16821
+URL:https://www.fs5navarra.es/tournaments/143/matches/16821
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16827@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20261122T090000
+DTEND;TZID=Europe/Madrid:20261122T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Laguarreta
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 5 · Local\nÁrbitro: pendiente de asignar\nhttps://www
+ .fs5navarra.es/tournaments/143/matches/16827
+URL:https://www.fs5navarra.es/tournaments/143/matches/16827
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16834@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20261127T200000
+DTEND;TZID=Europe/Madrid:20261127T205000
+SUMMARY:⚽ Ravenswood vs FCN Bar Orreaga
+LOCATION:Polideportivo San Jorge\, Navarra
+DESCRIPTION:Jornada 6 · Visitante\nÁrbitro: pendiente de asignar\nhttps:/
+ /www.fs5navarra.es/tournaments/143/matches/16834
+URL:https://www.fs5navarra.es/tournaments/143/matches/16834
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16840@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20261213T090000
+DTEND;TZID=Europe/Madrid:20261213T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Oxidaos
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 7 · Local\nÁrbitro: pendiente de asignar\nhttps://www
+ .fs5navarra.es/tournaments/143/matches/16840
+URL:https://www.fs5navarra.es/tournaments/143/matches/16840
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16847@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270109T210000
+DTEND;TZID=Europe/Madrid:20270109T215000
+SUMMARY:⚽ Fumonitos FS vs FCN Bar Orreaga
+LOCATION:SDC Echavacoiz\, Navarra
+DESCRIPTION:Jornada 8 · Visitante\nÁrbitro: pendiente de asignar\nhttps:/
+ /www.fs5navarra.es/tournaments/143/matches/16847
+URL:https://www.fs5navarra.es/tournaments/143/matches/16847
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16853@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270117T090000
+DTEND;TZID=Europe/Madrid:20270117T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Nueva Generación
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 9 · Local\nÁrbitro: pendiente de asignar\nhttps://www
+ .fs5navarra.es/tournaments/143/matches/16853
+URL:https://www.fs5navarra.es/tournaments/143/matches/16853
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16860@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270124T113000
+DTEND;TZID=Europe/Madrid:20270124T122000
+SUMMARY:⚽ Mitikos vs FCN Bar Orreaga
+LOCATION:Polideportivo Orcoien\, Navarra
+DESCRIPTION:Jornada 10 · Visitante\nÁrbitro: pendiente de asignar\nhttps:
+ //www.fs5navarra.es/tournaments/143/matches/16860
+URL:https://www.fs5navarra.es/tournaments/143/matches/16860
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16866@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270131T090000
+DTEND;TZID=Europe/Madrid:20270131T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Matalascañas
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 11 · Local\nÁrbitro: pendiente de asignar\nhttps://ww
+ w.fs5navarra.es/tournaments/143/matches/16866
+URL:https://www.fs5navarra.es/tournaments/143/matches/16866
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16868@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270207T090000
+DTEND;TZID=Europe/Madrid:20270207T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Fatos FC
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 12 · Local\nÁrbitro: pendiente de asignar\nhttps://ww
+ w.fs5navarra.es/tournaments/143/matches/16868
+URL:https://www.fs5navarra.es/tournaments/143/matches/16868
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16874@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270212T200000
+DTEND;TZID=Europe/Madrid:20270212T205000
+SUMMARY:⚽ Diablo Academy vs FCN Bar Orreaga
+LOCATION:Polideportivo de Esquiroz\, Navarra
+DESCRIPTION:Jornada 13 · Visitante\nÁrbitro: pendiente de asignar\nhttps:
+ //www.fs5navarra.es/tournaments/143/matches/16874
+URL:https://www.fs5navarra.es/tournaments/143/matches/16874
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16880@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270219T210000
+DTEND;TZID=Europe/Madrid:20270219T215000
+SUMMARY:⚽ Jalaman FC vs FCN Bar Orreaga
+LOCATION:Club Natación\, Navarra
+DESCRIPTION:Jornada 14 · Visitante\nÁrbitro: pendiente de asignar\nhttps:
+ //www.fs5navarra.es/tournaments/143/matches/16880
+URL:https://www.fs5navarra.es/tournaments/143/matches/16880
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16887@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270228T090000
+DTEND;TZID=Europe/Madrid:20270228T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Perico Pin Pin
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 15 · Local\nÁrbitro: pendiente de asignar\nhttps://ww
+ w.fs5navarra.es/tournaments/143/matches/16887
+URL:https://www.fs5navarra.es/tournaments/143/matches/16887
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16893@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270305T190000
+DTEND;TZID=Europe/Madrid:20270305T195000
+SUMMARY:⚽ Laguarreta vs FCN Bar Orreaga
+LOCATION:Polideportivo Orcoien\, Navarra
+DESCRIPTION:Jornada 16 · Visitante\nÁrbitro: pendiente de asignar\nhttps:
+ //www.fs5navarra.es/tournaments/143/matches/16893
+URL:https://www.fs5navarra.es/tournaments/143/matches/16893
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16900@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270404T090000
+DTEND;TZID=Europe/Madrid:20270404T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Ravenswood
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 17 · Local\nÁrbitro: pendiente de asignar\nhttps://ww
+ w.fs5navarra.es/tournaments/143/matches/16900
+URL:https://www.fs5navarra.es/tournaments/143/matches/16900
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16906@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270411T120000
+DTEND;TZID=Europe/Madrid:20270411T125000
+SUMMARY:⚽ Oxidaos vs FCN Bar Orreaga
+LOCATION:SDC Echavacoiz\, Navarra
+DESCRIPTION:Jornada 18 · Visitante\nÁrbitro: pendiente de asignar\nhttps:
+ //www.fs5navarra.es/tournaments/143/matches/16906
+URL:https://www.fs5navarra.es/tournaments/143/matches/16906
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16913@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270418T090000
+DTEND;TZID=Europe/Madrid:20270418T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Fumonitos FS
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 19 · Local\nÁrbitro: pendiente de asignar\nhttps://ww
+ w.fs5navarra.es/tournaments/143/matches/16913
+URL:https://www.fs5navarra.es/tournaments/143/matches/16913
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16919@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270423T090000
+DTEND;TZID=Europe/Madrid:20270423T095000
+SUMMARY:⚽ Nueva Generación vs FCN Bar Orreaga
+LOCATION:Polideportivo Teresianas\, Navarra
+DESCRIPTION:Jornada 20 · Visitante\nÁrbitro: pendiente de asignar\nhttps:
+ //www.fs5navarra.es/tournaments/143/matches/16919
+URL:https://www.fs5navarra.es/tournaments/143/matches/16919
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16926@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270509T090000
+DTEND;TZID=Europe/Madrid:20270509T095000
+SUMMARY:⚽ FCN Bar Orreaga vs Mitikos
+LOCATION:Colegio Hilarión Eslava\, Paseo de la Paz s/n\, 31600-Burlada
+DESCRIPTION:Jornada 21 · Local\nÁrbitro: pendiente de asignar\nhttps://ww
+ w.fs5navarra.es/tournaments/143/matches/16926
+URL:https://www.fs5navarra.es/tournaments/143/matches/16926
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:fs5-match-16932@fcn-bar-orreaga
+DTSTAMP:20261020T114316Z
+DTSTART;TZID=Europe/Madrid:20270514T190000
+DTEND;TZID=Europe/Madrid:20270514T195000
+SUMMARY:⚽ Matalascañas vs FCN Bar Orreaga
+LOCATION:Polideportivo Orcoien\, Navarra
+DESCRIPTION:Jornada 22 · Visitante\nÁrbitro: pendiente de asignar\nhttps:
+ //www.fs5navarra.es/tournaments/143/matches/16932
+URL:https://www.fs5navarra.es/tournaments/143/matches/16932
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Partido
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

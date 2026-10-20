@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FCN Bar Orreaga</title>
+<meta name="description" content="Calendario, árbitros y asistencia del FCN Bar Orreaga en FS5 Navarra">
+<meta name="theme-color" content="#0c0a10">
+<link rel="icon" type="image/png" href="img/logo-orreaga.png">
+<link rel="apple-touch-icon" href="img/logo-fresas.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Barlow:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* 1ª equipación: rayas negras y moradas (oscuro). 2ª: blanca con morado y rosa (claro). */
+:root, :root[data-kit="1"] {
+  --bg: #0c0a10;
+  --surface: #16111e;
+  --surface-2: #201829;
+  --line: #31263f;
+  --text: #f5f0fa;
+  --muted: #a898bd;
+  --purple: #8c4fd0;
+  --purple-deep: #653294;
+  --pink: #f29cc4;
+  --cream: #e9dfa6;
+  --ok: #4cc38a;
+  --maybe: #e9b949;
+  --no: #ef6b6b;
+  --stripe-a: #000000;
+  --stripe-b: #653294;
+  --on-accent: #ffffff;
+  --accent-text: #f29cc4;
+  --shadow: 0 10px 30px rgba(0,0,0,.45);
+  color-scheme: dark;
+}
+:root[data-kit="2"] {
+  --bg: #fbf8fd;
+  --surface: #ffffff;
+  --surface-2: #f4eef9;
+  --line: #e6dcef;
+  --text: #1d1426;
+  --muted: #6e5f80;
+  --purple: #653294;
+  --purple-deep: #4e2475;
+  --pink: #c93a78;
+  --cream: #8a6a12;
+  --ok: #1f8a57;
+  --maybe: #a86f00;
+  --no: #c43b3b;
+  --stripe-a: #ffffff;
+  --stripe-b: #f3c6dc;
+  --on-accent: #ffffff;
+  --accent-text: #653294;
+  --shadow: 0 8px 24px rgba(101,50,148,.12);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-kit]) {
+    --bg: #fbf8fd; --surface: #ffffff; --surface-2: #f4eef9; --line: #e6dcef;
+    --text: #1d1426; --muted: #6e5f80; --purple: #653294; --purple-deep: #4e2475;
+    --pink: #c93a78; --cream: #8a6a12; --ok: #1f8a57; --maybe: #a86f00; --no: #c43b3b;
+    --stripe-a: #ffffff; --stripe-b: #f3c6dc; --accent-text: #653294; --shadow: 0 8px 24px rgba(101,50,148,.12);
+    color-scheme: light;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.45 "Barlow", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+
+/* Cabecera con las rayas de la camiseta */
+.kit-band {
+  height: 14px;
+  background: repeating-linear-gradient(90deg, var(--stripe-a) 0 18px, var(--stripe-b) 18px 36px);
+}
+header.top { padding: 22px 0 8px; text-align: center; position: relative; }
+.logo { width: min(320px, 78vw); height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 6px 18px rgba(0,0,0,.35)); }
+h1 {
+  font: 400 clamp(22px, 6vw, 30px)/1.1 "Bungee", sans-serif;
+  margin: 10px 0 4px; letter-spacing: .5px;
+}
+h1 .fcn { color: var(--purple); }
+.sub { color: var(--muted); font-size: 14px; margin: 0; }
+.kit-toggle {
+  position: absolute; top: 14px; right: 0;
+  display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden;
+  background: var(--surface);
+}
+.kit-toggle button {
+  border: 0; background: transparent; padding: 6px 10px; cursor: pointer;
+  font: 700 12px "Barlow Semi Condensed", sans-serif; color: var(--muted);
+}
+.kit-toggle button[aria-pressed="true"] { background: var(--purple); color: var(--on-accent); }
+
+/* Barra de identidad */
+.me {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin: 18px 0 6px; padding: 10px 14px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  font-size: 15px;
+}
+.me strong { color: var(--accent-text); }
+.link-btn {
+  background: none; border: 0; padding: 4px 0; cursor: pointer;
+  color: var(--accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+}
+
+h2 {
+  font: 700 13px "Barlow Semi Condensed", sans-serif; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted); margin: 28px 0 10px;
+}
+
+/* Tarjetas de partido */
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+  padding: 16px; margin-bottom: 12px;
+}
+.card.hero {
+  position: relative; overflow: hidden; padding: 20px 18px 18px;
+  border: 0; box-shadow: var(--shadow);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--surface) 82%, transparent), var(--surface) 70%),
+    repeating-linear-gradient(90deg, var(--stripe-a) 0 26px, var(--stripe-b) 26px 52px);
+}
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
+.meta .when { font: 700 15px "Barlow Semi Condensed", sans-serif; color: var(--text); letter-spacing: .3px; }
+.badge {
+  font: 700 11px "Barlow Semi Condensed", sans-serif; letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 999px; border: 1px solid var(--accent-text); color: var(--accent-text);
+}
+.badge.home { background: var(--purple); border-color: var(--purple); color: var(--on-accent); }
+.badge.soon { background: var(--pink); border-color: var(--pink); color: #1d1426; }
+.rival { font: 400 clamp(20px, 5.4vw, 26px)/1.15 "Bungee", sans-serif; margin: 10px 0 12px; }
+.rival .vs { color: var(--muted); font-size: .7em; margin-right: 6px; }
+.card:not(.hero) .rival { font-size: 18px; margin: 6px 0 10px; }
+.facts { display: grid; gap: 6px; font-size: 15px; margin-bottom: 14px; }
+.facts div { display: flex; gap: 8px; align-items: baseline; }
+.facts .k { color: var(--muted); min-width: 64px; font-size: 13px; text-transform: uppercase; letter-spacing: .6px; font-weight: 600; }
+.facts a { text-decoration-color: var(--line); text-underline-offset: 3px; }
+.pending { color: var(--muted); font-style: italic; }
+
+/* Asistencia */
+.vote { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.vote button {
+  border: 1.5px solid var(--line); background: var(--surface-2); border-radius: 12px;
+  padding: 10px 6px; cursor: pointer; font-weight: 700; font-size: 15px;
+  transition: transform .08s ease, background .15s ease, border-color .15s ease;
+}
+.vote button:active { transform: scale(.97); }
+.vote button[data-estado="si"][aria-pressed="true"] { background: var(--ok); border-color: var(--ok); color: #fff; }
+.vote button[data-estado="duda"][aria-pressed="true"] { background: var(--maybe); border-color: var(--maybe); color: #1d1426; }
+.vote button[data-estado="no"][aria-pressed="true"] { background: var(--no); border-color: var(--no); color: #fff; }
+.vote button:focus-visible, .link-btn:focus-visible, .cal a:focus-visible { outline: 2px solid var(--pink); outline-offset: 2px; }
+.tally { margin-top: 10px; font-size: 14px; color: var(--muted); }
+.tally b { color: var(--text); }
+.tally .warn { color: var(--maybe); font-weight: 600; }
+details.who { margin-top: 6px; font-size: 14px; }
+details.who summary { cursor: pointer; color: var(--muted); }
+.who-groups { display: grid; gap: 6px; margin-top: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chips .lbl { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; min-width: 70px; }
+.chip { padding: 2px 9px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); font-size: 13px; }
+.lbl.si { color: var(--ok); } .lbl.duda { color: var(--maybe); } .lbl.no { color: var(--no); } .lbl.nr { color: var(--muted); }
+.off { font-size: 13px; color: var(--muted); }
+
+/* Resultados */
+.results { display: grid; gap: 6px; }
+.res {
+  display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 10px;
+  padding: 10px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; font-size: 15px;
+}
+.res .r { font: 400 13px "Bungee", sans-serif; width: 28px; height: 28px; border-radius: 8px; display: grid; place-items: center; color: #fff; }
+.r.V { background: var(--ok); } .r.E { background: var(--maybe); color: #1d1426; } .r.D { background: var(--no); }
+.res .score { font: 400 15px "Bungee", sans-serif; }
+.res small { color: var(--muted); display: block; font-size: 12px; }
+
+/* Calendario */
+.cal { display: grid; gap: 8px; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .cal { grid-template-columns: repeat(3, 1fr); } }
+.cal a {
+  display: block; text-align: center; text-decoration: none; padding: 12px 10px; border-radius: 12px;
+  border: 1.5px solid var(--purple); font-weight: 700; font-size: 15px;
+}
+.cal a.primary { background: var(--purple); color: var(--on-accent); }
+.note { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+
+.more { width: 100%; padding: 10px; border-radius: 12px; border: 1px dashed var(--line); background: transparent; cursor: pointer; color: var(--muted); font-weight: 600; }
+
+footer { text-align: center; padding: 30px 0 40px; color: var(--muted); font-size: 13px; }
+footer .logos { display: flex; justify-content: center; align-items: center; gap: 18px; margin-bottom: 12px; }
+footer .logos img { height: 64px; width: auto; }
+
+/* Diálogo de identidad */
+dialog {
+  border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--text);
+  width: min(420px, calc(100vw - 32px)); padding: 20px; box-shadow: var(--shadow);
+}
+dialog::backdrop { background: rgba(10,6,16,.6); }
+dialog h3 { font: 400 20px "Bungee", sans-serif; margin: 0 0 12px; }
+label { display: block; font-weight: 600; font-size: 14px; margin: 12px 0 6px; }
+select, input {
+  width: 100%; padding: 11px 12px; border-radius: 10px; border: 1.5px solid var(--line);
+  background: var(--surface-2); color: var(--text); font: inherit;
+}
+.row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 18px; }
+.btn { padding: 10px 16px; border-radius: 10px; border: 1.5px solid var(--purple); background: transparent; cursor: pointer; font-weight: 700; }
+.btn.primary { background: var(--purple); color: var(--on-accent); }
+.err { color: var(--no); font-size: 14px; min-height: 1.2em; margin-top: 8px; }
+
+.toast {
+  position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%) translateY(120%);
+  background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 12px; font-weight: 600; font-size: 14px;
+  transition: transform .25s ease; max-width: calc(100vw - 32px); z-index: 10;
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+.empty { color: var(--muted); padding: 20px; text-align: center; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="kit-band" aria-hidden="true"></div>
+<div class="wrap">
+  <header class="top">
+    <div class="kit-toggle" role="group" aria-label="Equipación (tema de colores)">
+      <button type="button" data-kit="1" aria-pressed="false" title="1ª equipación (oscuro)">1ª</button>
+      <button type="button" data-kit="2" aria-pressed="false" title="2ª equipación (claro)">2ª</button>
+    </div>
+    <img class="logo" src="img/logo-orreaga.png" alt="Bar Orreaga" width="900" height="499">
+    <h1><span class="fcn">FCN</span> Bar Orreaga</h1>
+    <p class="sub" id="competicion">FS5 Navarra</p>
+  </header>
+
+  <div class="me" id="me"></div>
+
+  <h2>Próximo partido</h2>
+  <div id="hero"><div class="card empty">Cargando calendario…</div></div>
+
+  <h2>Siguientes</h2>
+  <div id="upcoming"></div>
+
+  <h2>Calendario en tu móvil</h2>
+  <div class="cal">
+    <a class="primary" id="cal-google" href="#" target="_blank" rel="noopener">Google Calendar</a>
+    <a id="cal-apple" href="#">iPhone / Apple</a>
+    <a id="cal-ics" href="calendario.ics" download>Descargar .ics</a>
+  </div>
+  <p class="note">Suscríbete una vez y los cambios de horario y los árbitros te llegan solos (Google tarda unas horas en refrescar).</p>
+
+  <h2>Resultados</h2>
+  <div class="results" id="results"></div>
+
+  <footer>
+    <div class="logos">
+      <img src="img/logo-orreaga.png" alt="Bar Orreaga" width="900" height="499" loading="lazy">
+      <img src="img/logo-fresas.png" alt="Fresas con Nati" width="600" height="570" loading="lazy">
+    </div>
+    <div id="updated"></div>
+    <div>Datos: <a id="source" href="https://www.fs5navarra.es" target="_blank" rel="noopener">FS5 Navarra</a></div>
+  </footer>
+</div>
+
+<dialog id="who-dialog">
+  <form method="dialog" id="who-form">
+    <h3>¿Quién eres?</h3>
+    <label for="who-select">Jugador</label>
+    <select id="who-select" required></select>
+    <label for="who-pin">PIN del equipo</label>
+    <input id="who-pin" type="password" autocomplete="off" required placeholder="Te lo pasan por el grupo">
+    <div class="err" id="who-err" role="alert"></div>
+    <div class="row">
+      <button type="button" class="btn" id="who-cancel">Cancelar</button>
+      <button type="submit" class="btn primary">Guardar</button>
+    </div>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script>
+(() => {
+  const CFG = window.ORREAGA_CONFIG || {};
+  const SB_ON = !!(CFG.supabaseUrl && CFG.supabaseKey);
+  const MIN = CFG.minimoJugadores || 5;
+  const $ = (s) => document.querySelector(s);
+
+  // ---------- almacenamiento local (puede fallar en modo privado) ----------
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
+    set(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch {} },
+  };
+
+  // ---------- tema: 1ª / 2ª equipación ----------
+  function applyKit(kit) {
+    if (kit) document.documentElement.dataset.kit = kit; else delete document.documentElement.dataset.kit;
+    const effective = kit || (matchMedia("(prefers-color-scheme: light)").matches ? "2" : "1");
+    document.querySelectorAll(".kit-toggle button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.kit === effective)));
+    document.querySelector('meta[name="theme-color"]').content = effective === "2" ? "#fbf8fd" : "#0c0a10";
+  }
+  applyKit(store.get("kit"));
+  document.querySelectorAll(".kit-toggle button").forEach(b => b.addEventListener("click", () => {
+    store.set("kit", b.dataset.kit); applyKit(b.dataset.kit);
+  }));
+
+  // ---------- estado ----------
+  let data = null;
+  let asistencia = new Map(); // partidoId -> Map(jugadorId -> estado)
+  let me = Number(store.get("jugador")) || null;
+  let pin = store.get("pin");
+  let showAll = false;
+  let pendingVote = null;
+
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const toDate = (s) => { const [d, t] = s.split("T"); const [y, m, dd] = d.split("-").map(Number); const [h, mi] = t.split(":").map(Number); return new Date(y, m - 1, dd, h, mi); };
+  const fmtDay = new Intl.DateTimeFormat("es-ES", { weekday: "short", day: "numeric", month: "short" });
+  const fmtTime = new Intl.DateTimeFormat("es-ES", { hour: "2-digit", minute: "2-digit" });
+  const when = (p) => { const d = toDate(p.inicio); return `${fmtDay.format(d).replace(/\./g, "")} · ${fmtTime.format(d)}`; };
+  const jName = (id) => (data.jugadores.find(j => j.id === id) || {}).nombre || "Alguien";
+  const shortJ = (s) => s.replace(/^Jornada\s*/i, "J");
+
+  function relDays(p) {
+    const d = toDate(p.inicio); const today = new Date(); today.setHours(0, 0, 0, 0);
+    const day = new Date(d); day.setHours(0, 0, 0, 0);
+    const n = Math.round((day - today) / 864e5);
+    return n === 0 ? "Hoy" : n === 1 ? "Mañana" : n > 1 && n < 8 ? `En ${n} días` : null;
+  }
+  function mapUrl(p) {
+    const q = [p.lugar, p.direccion || "Navarra"].join(", ");
+    return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+  }
+
+  // ---------- Supabase (REST, sin librerías) ----------
+  async function sb(path, opts = {}) {
+    const r = await fetch(CFG.supabaseUrl.replace(/\/$/, "") + "/rest/v1/" + path, {
+      ...opts,
+      headers: { apikey: CFG.supabaseKey, Authorization: "Bearer " + CFG.supabaseKey, "Content-Type": "application/json", ...(opts.headers || {}) },
+    });
+    if (!r.ok) { let msg = r.status + ""; try { msg = (await r.json()).message || msg; } catch {} throw new Error(msg); }
+    const txt = await r.text(); return txt ? JSON.parse(txt) : null;
+  }
+  async function loadAsistencia() {
+    if (!SB_ON || !data) return;
+    const ids = data.partidos.filter(p => p.estado === "programado").map(p => p.id);
+    if (!ids.length) return;
+    try {
+      const rows = await sb(`asistencia?select=partido_id,jugador_id,estado&partido_id=in.(${ids.join(",")})`);
+      const m = new Map();
+      rows.forEach(r => { if (!m.has(r.partido_id)) m.set(r.partido_id, new Map()); m.get(r.partido_id).set(r.jugador_id, r.estado); });
+      asistencia = m; renderMatches();
+    } catch (e) { toast("No se pudo cargar la asistencia"); }
+  }
+  async function votar(partidoId, estado) {
+    if (!me || !pin) { pendingVote = { partidoId, estado }; openWho(); return; }
+    const cur = asistencia.get(partidoId)?.get(me) || null;
+    const next = cur === estado ? null : estado; // pulsar otra vez = quitar respuesta
+    if (!asistencia.has(partidoId)) asistencia.set(partidoId, new Map());
+    const m = asistencia.get(partidoId);
+    next ? m.set(me, next) : m.delete(me); renderMatches();
+    try {
+      await sb("rpc/votar", { method: "POST", body: JSON.stringify({ p_partido: partidoId, p_jugador: me, p_estado: next, p_pin: pin }) });
+      toast(next === "si" ? "¡Apuntado! 💜" : next === "duda" ? "Marcado como duda" : next === "no" ? "Anotado: no vas" : "Respuesta borrada");
+    } catch (e) {
+      cur ? m.set(me, cur) : m.delete(me); renderMatches();
+      if (/pin/i.test(e.message)) { pin = null; store.set("pin", null); toast("PIN incorrecto"); openWho(); }
+      else toast("No se pudo guardar, prueba otra vez");
+    }
+  }
+
+  // ---------- render ----------
+  function voteBlock(p) {
+    if (!SB_ON) return `<p class="off">La asistencia se activa al configurar Supabase (ver README).</p>`;
+    const m = asistencia.get(p.id) || new Map();
+    const mine = me ? m.get(me) : null;
+    const by = { si: [], duda: [], no: [] };
+    data.jugadores.forEach(j => { const e = m.get(j.id); if (e) by[e].push(j.nombre); });
+    const nr = data.jugadores.filter(j => !m.get(j.id)).map(j => j.nombre);
+    const warn = by.si.length < MIN ? ` · <span class="warn">faltan ${MIN - by.si.length} para ${MIN}</span>` : "";
+    const chips = (arr) => arr.length ? arr.map(n => `<span class="chip">${esc(n)}</span>`).join("") : `<span class="off">—</span>`;
+    return `
+      <div class="vote" role="group" aria-label="¿Vas al partido?">
+        <button type="button" data-p="${p.id}" data-estado="si" aria-pressed="${mine === "si"}">✓ Voy</button>
+        <button type="button" data-p="${p.id}" data-estado="duda" aria-pressed="${mine === "duda"}">? Duda</button>
+        <button type="button" data-p="${p.id}" data-estado="no" aria-pressed="${mine === "no"}">✕ No</button>
+      </div>
+      <div class="tally"><b>${by.si.length}</b> van · ${by.duda.length} duda · ${by.no.length} no · ${nr.length} sin responder${warn}</div>
+      <details class="who"><summary>Ver quién</summary>
+        <div class="who-groups">
+          <div class="chips"><span class="lbl si">Van</span>${chips(by.si)}</div>
+          <div class="chips"><span class="lbl duda">Duda</span>${chips(by.duda)}</div>
+          <div class="chips"><span class="lbl no">No</span>${chips(by.no)}</div>
+          <div class="chips"><span class="lbl nr">Sin resp.</span>${chips(nr)}</div>
+        </div>
+      </details>`;
+  }
+  function matchCard(p, hero) {
+    const rel = relDays(p);
+    const arb = p.arbitros && p.arbitros.length ? esc(p.arbitros.join(", ")) : `<span class="pending">Pendiente de asignar</span>`;
+    return `<article class="card${hero ? " hero" : ""}" data-match="${p.id}">
+      <div class="meta">
+        <span class="when">${esc(shortJ(p.jornada))} · ${esc(when(p))}</span>
+        <span class="badge${p.local ? " home" : ""}">${p.local ? "Local" : "Visitante"}</span>
+        ${rel ? `<span class="badge soon">${rel}</span>` : ""}
+      </div>
+      <div class="rival"><span class="vs">vs</span>${esc(p.rival)}</div>
+      <div class="facts">
+        <div><span class="k">Lugar</span><a href="${mapUrl(p)}" target="_blank" rel="noopener">${esc(p.lugar)}${p.direccion ? ` · ${esc(p.direccion)}` : ""}</a></div>
+        <div><span class="k">Árbitro</span><span>${arb}</span></div>
+      </div>
+      ${voteBlock(p)}
+    </article>`;
+  }
+  function renderMatches() {
+    if (!data) return;
+    const now = new Date();
+    const prox = data.partidos.filter(p => p.estado === "programado" && toDate(p.inicio).getTime() + p.duracion * 6e4 > now.getTime());
+    $("#hero").innerHTML = prox.length ? matchCard(prox[0], true) : `<div class="card empty">No quedan partidos en el calendario.</div>`;
+    const rest = prox.slice(1);
+    const visible = showAll ? rest : rest.slice(0, 3);
+    $("#upcoming").innerHTML = visible.map(p => matchCard(p, false)).join("") +
+      (rest.length > 3 ? `<button type="button" class="more" id="more">${showAll ? "Ver menos" : `Ver los ${rest.length} partidos`}</button>` : "") +
+      (!rest.length ? `<div class="off">Nada más por ahora.</div>` : "");
+    const played = data.partidos.filter(p => p.estado === "jugado").reverse();
+    $("#results").innerHTML = played.length ? played.map(p => {
+      const r = p.goles_favor > p.goles_contra ? "V" : p.goles_favor < p.goles_contra ? "D" : "E";
+      const score = p.local ? `${p.goles_favor}-${p.goles_contra}` : `${p.goles_contra}-${p.goles_favor}`;
+      return `<a class="res" href="${esc(p.url)}" target="_blank" rel="noopener" style="text-decoration:none">
+        <span class="r ${r}">${r}</span>
+        <span>${p.local ? "vs" : "en casa de"} ${esc(p.rival)}<small>${esc(shortJ(p.jornada))} · ${esc(when(p))}</small></span>
+        <span class="score">${score}</span></a>`;
+    }).join("") : `<div class="off">Aún no hay resultados.</div>`;
+  }
+  function renderMe() {
+    if (!SB_ON) { $("#me").innerHTML = `<span>Asistencia desactivada</span>`; return; }
+    $("#me").innerHTML = me && pin
+      ? `<span>Hola, <strong>${esc(jName(me))}</strong></span><button type="button" class="link-btn" id="change-me">No soy yo</button>`
+      : `<span>Dinos quién eres para apuntarte</span><button type="button" class="link-btn" id="change-me">Identificarme</button>`;
+  }
+
+  // ---------- identidad ----------
+  function openWho() {
+    const sel = $("#who-select");
+    sel.innerHTML = `<option value="">Elige tu nombre</option>` + data.jugadores.map(j => `<option value="${j.id}"${j.id === me ? " selected" : ""}>${esc(j.nombre)}</option>`).join("");
+    $("#who-pin").value = pin || ""; $("#who-err").textContent = "";
+    $("#who-dialog").showModal();
+  }
+  $("#who-cancel").addEventListener("click", () => { pendingVote = null; $("#who-dialog").close(); });
+  $("#who-form").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const id = Number($("#who-select").value); const p = $("#who-pin").value.trim();
+    if (!id) { $("#who-err").textContent = "Elige tu nombre"; return; }
+    try {
+      const ok = await sb("rpc/comprobar_pin", { method: "POST", body: JSON.stringify({ p_pin: p }) });
+      if (!ok) { $("#who-err").textContent = "PIN incorrecto"; return; }
+    } catch { $("#who-err").textContent = "No se pudo comprobar el PIN"; return; }
+    me = id; pin = p; store.set("jugador", String(id)); store.set("pin", p);
+    $("#who-dialog").close(); renderMe(); renderMatches();
+    if (pendingVote) { const v = pendingVote; pendingVote = null; votar(v.partidoId, v.estado); }
+  });
+
+  // ---------- eventos ----------
+  document.addEventListener("click", (ev) => {
+    const b = ev.target.closest(".vote button"); if (b) { votar(Number(b.dataset.p), b.dataset.estado); return; }
+    if (ev.target.closest("#more")) { showAll = !showAll; renderMatches(); return; }
+    if (ev.target.closest("#change-me")) openWho();
+  });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) loadAsistencia(); });
+  setInterval(() => { if (!document.hidden) loadAsistencia(); }, 60000);
+
+  let toastT;
+  function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove("show"), 2200); }
+
+  // ---------- calendario ----------
+  const icsUrl = new URL("calendario.ics", location.href).href;
+  const webcal = icsUrl.replace(/^https?:/, "webcal:");
+  $("#cal-google").href = "https://calendar.google.com/calendar/render?cid=" + encodeURIComponent(webcal);
+  $("#cal-apple").href = webcal;
+
+  // ---------- arranque ----------
+  fetch("partidos.json", { cache: "no-cache" })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => {
+      data = d;
+      $("#competicion").textContent = d.competicion;
+      $("#source").href = d.fuente;
+      const up = new Date(d.actualizado);
+      $("#updated").textContent = "Datos de FS5 actualizados el " + up.toLocaleString("es-ES", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+      renderMe(); renderMatches(); loadAsistencia();
+    })
+    .catch(() => { $("#hero").innerHTML = `<div class="card empty">No se pudo cargar el calendario.</div>`; });
+})();
+</script>
+</body>
+</html>

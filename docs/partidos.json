@@ -1,0 +1,422 @@
+{
+ "equipo": "FCN Bar Orreaga",
+ "competicion": "FS5 Navarra · Fin de semana · 3ª División Grupo III",
+ "fuente": "https://www.fs5navarra.es/tournaments/143",
+ "jugadores": [
+  {
+   "id": 6080,
+   "nombre": "Aingeru F."
+  },
+  {
+   "id": 1851,
+   "nombre": "Alex N."
+  },
+  {
+   "id": 5341,
+   "nombre": "Ander A."
+  },
+  {
+   "id": 5997,
+   "nombre": "Asier M."
+  },
+  {
+   "id": 5998,
+   "nombre": "Asier O."
+  },
+  {
+   "id": 5975,
+   "nombre": "Asier P."
+  },
+  {
+   "id": 2146,
+   "nombre": "Ekaitz G."
+  },
+  {
+   "id": 5995,
+   "nombre": "Eneko Q."
+  },
+  {
+   "id": 5996,
+   "nombre": "Hegoi B."
+  },
+  {
+   "id": 5774,
+   "nombre": "Iker U."
+  },
+  {
+   "id": 6058,
+   "nombre": "Ivan M."
+  },
+  {
+   "id": 4764,
+   "nombre": "Iñigo E."
+  },
+  {
+   "id": 5999,
+   "nombre": "Oier E."
+  }
+ ],
+ "campos": {
+  "22": {
+   "nombre": "Colegio Hilarión Eslava",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  }
+ },
+ "partidos": [
+  {
+   "id": 16802,
+   "jornada": "Jornada 1",
+   "inicio": "2026-10-18T19:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Fatos FC",
+   "campo_id": 2,
+   "lugar": "SDC Echavacoiz",
+   "estado": "jugado",
+   "goles_favor": 10,
+   "goles_contra": 1,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16802",
+   "direccion": ""
+  },
+  {
+   "id": 16808,
+   "jornada": "Jornada 2",
+   "inicio": "2026-10-25T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Diablo Academy",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [
+    "A05 Jose Javier Fernandez"
+   ],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16808",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16814,
+   "jornada": "Jornada 3",
+   "inicio": "2026-11-08T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Jalaman FC",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16814",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16821,
+   "jornada": "Jornada 4",
+   "inicio": "2026-11-15T13:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Perico Pin Pin",
+   "campo_id": 2,
+   "lugar": "SDC Echavacoiz",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16821",
+   "direccion": ""
+  },
+  {
+   "id": 16827,
+   "jornada": "Jornada 5",
+   "inicio": "2026-11-22T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Laguarreta",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16827",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16834,
+   "jornada": "Jornada 6",
+   "inicio": "2026-11-27T20:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Ravenswood",
+   "campo_id": 8,
+   "lugar": "Polideportivo San Jorge",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16834",
+   "direccion": ""
+  },
+  {
+   "id": 16840,
+   "jornada": "Jornada 7",
+   "inicio": "2026-12-13T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Oxidaos",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16840",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16847,
+   "jornada": "Jornada 8",
+   "inicio": "2027-01-09T21:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Fumonitos FS",
+   "campo_id": 2,
+   "lugar": "SDC Echavacoiz",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16847",
+   "direccion": ""
+  },
+  {
+   "id": 16853,
+   "jornada": "Jornada 9",
+   "inicio": "2027-01-17T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Nueva Generación",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16853",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16860,
+   "jornada": "Jornada 10",
+   "inicio": "2027-01-24T11:30",
+   "duracion": 50,
+   "local": false,
+   "rival": "Mitikos",
+   "campo_id": 10,
+   "lugar": "Polideportivo Orcoien",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16860",
+   "direccion": ""
+  },
+  {
+   "id": 16866,
+   "jornada": "Jornada 11",
+   "inicio": "2027-01-31T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Matalascañas",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16866",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16868,
+   "jornada": "Jornada 12",
+   "inicio": "2027-02-07T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Fatos FC",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16868",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16874,
+   "jornada": "Jornada 13",
+   "inicio": "2027-02-12T20:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Diablo Academy",
+   "campo_id": 4,
+   "lugar": "Polideportivo de Esquiroz",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16874",
+   "direccion": ""
+  },
+  {
+   "id": 16880,
+   "jornada": "Jornada 14",
+   "inicio": "2027-02-19T21:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Jalaman FC",
+   "campo_id": 35,
+   "lugar": "Club Natación",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16880",
+   "direccion": ""
+  },
+  {
+   "id": 16887,
+   "jornada": "Jornada 15",
+   "inicio": "2027-02-28T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Perico Pin Pin",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16887",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16893,
+   "jornada": "Jornada 16",
+   "inicio": "2027-03-05T19:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Laguarreta",
+   "campo_id": 10,
+   "lugar": "Polideportivo Orcoien",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16893",
+   "direccion": ""
+  },
+  {
+   "id": 16900,
+   "jornada": "Jornada 17",
+   "inicio": "2027-04-04T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Ravenswood",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16900",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16906,
+   "jornada": "Jornada 18",
+   "inicio": "2027-04-11T12:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Oxidaos",
+   "campo_id": 2,
+   "lugar": "SDC Echavacoiz",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16906",
+   "direccion": ""
+  },
+  {
+   "id": 16913,
+   "jornada": "Jornada 19",
+   "inicio": "2027-04-18T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Fumonitos FS",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16913",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16919,
+   "jornada": "Jornada 20",
+   "inicio": "2027-04-23T09:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Nueva Generación",
+   "campo_id": 1,
+   "lugar": "Polideportivo Teresianas",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16919",
+   "direccion": ""
+  },
+  {
+   "id": 16926,
+   "jornada": "Jornada 21",
+   "inicio": "2027-05-09T09:00",
+   "duracion": 50,
+   "local": true,
+   "rival": "Mitikos",
+   "campo_id": 22,
+   "lugar": "Colegio Hilarión Eslava",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16926",
+   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  {
+   "id": 16932,
+   "jornada": "Jornada 22",
+   "inicio": "2027-05-14T19:00",
+   "duracion": 50,
+   "local": false,
+   "rival": "Matalascañas",
+   "campo_id": 10,
+   "lugar": "Polideportivo Orcoien",
+   "estado": "programado",
+   "goles_favor": null,
+   "goles_contra": null,
+   "arbitros": [],
+   "url": "https://www.fs5navarra.es/tournaments/143/matches/16932",
+   "direccion": ""
+  }
+ ],
+ "actualizado": "2026-10-20T11:43:16Z"
+}
