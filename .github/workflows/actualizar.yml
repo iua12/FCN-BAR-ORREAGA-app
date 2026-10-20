@@ -50,11 +50,13 @@ jobs:
           fi
 
       # El plan gratuito de Supabase pausa proyectos sin actividad; una lectura diaria lo mantiene vivo.
+      # Si falla, no debe frenar el deploy de la web.
       - name: Mantener Supabase activo
         if: env.SUPABASE_URL != ''
+        continue-on-error: true
         run: |
           curl -fsS "$SUPABASE_URL/rest/v1/asistencia?select=partido_id&limit=1" \
-            -H "apikey: $SUPABASE_KEY" -H "Authorization: Bearer $SUPABASE_KEY" > /dev/null
+            -H "apikey: $SUPABASE_KEY" > /dev/null
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
