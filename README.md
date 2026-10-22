@@ -44,3 +44,8 @@ En la pestaña **Actions**, abre **Actualizar calendario** y pulsa **Run workflo
 - **Seguridad:** el PIN es compartido y cualquiera que lo tenga puede marcar por otro jugador. Para un equipo de amigos es suficiente. Si se filtra, cámbialo con `update public.ajustes set valor = 'nuevo' where clave = 'pin';`.
 - **Visibilidad:** la web es pública. Muestra nombres abreviados (Iker U.) y la asistencia. Los datos de partidos ya son públicos en FS5.
 - **Dependencia de FS5:** la API no es oficial para terceros. Si FS5 cambia su web, el script puede dejar de funcionar. En ese caso la web sigue mostrando los últimos datos guardados.
+
+## Extra personal: Osasuna en El Sadar
+Independiente de la web del equipo, que no lo enlaza ni lo usa. `scripts/osasuna.py` genera `docs/osasuna.ics` con los partidos de Osasuna como local en El Sadar (LaLiga y Copa del Rey) a partir de la API pública de ESPN. La Action **Calendario Osasuna** lo actualiza los miércoles y también se puede lanzar a mano.
+- Partido con horario oficial: evento con su hora.
+- Jornada sin horario: evento de día completo de viernes a lunes (de martes a jueves si es entre semana). Cuando LaLiga fija la hora, ese mismo evento se convierte en uno con hora.

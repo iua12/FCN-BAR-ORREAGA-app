@@ -1,0 +1,60 @@
+name: Calendario Osasuna
+
+# Calendario personal (Osasuna en El Sadar). Independiente del de FCN Bar Orreaga:
+# solo toca docs/osasuna.ics. Comparte grupo de concurrencia con "actualizar" para que
+# los dos no hagan push ni desplieguen Pages a la vez.
+on:
+  schedule:
+    # Miércoles a las 10:23 (hora de Pamplona en invierno). LaLiga publica los horarios por bloques.
+    - cron: "23 9 * * 3"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: actualizar
+  cancel-in-progress: false
+
+jobs:
+  osasuna:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Descargar calendario de Osasuna
+        run: python scripts/osasuna.py
+
+      - name: Guardar cambios
+        id: guardar
+        run: |
+          git config user.name "orreaga-bot"
+          git config user.email "orreaga-bot@users.noreply.github.com"
+          git add docs/osasuna.ics
+          if git diff --cached --quiet; then
+            echo "Sin cambios en Osasuna"
+          else
+            git commit -m "Actualizar calendario Osasuna"
+            git pull --rebase origin main
+            git push
+            echo "cambios=1" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/configure-pages@v5
+        if: steps.guardar.outputs.cambios == '1'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.guardar.outputs.cambios == '1'
+        with:
+          path: docs
+      - id: deploy
+        if: steps.guardar.outputs.cambios == '1'
+        uses: actions/deploy-pages@v4

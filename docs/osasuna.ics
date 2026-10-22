@@ -1,0 +1,212 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Iker//Osasuna en El Sadar//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Osasuna en El Sadar
+X-WR-TIMEZONE:Europe/Madrid
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:espn-401882909@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART:20260824T173000Z
+DTEND:20260824T193000Z
+SUMMARY:🔴 Osasuna vs Levante (0-0)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882901@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART:20260831T173000Z
+DTEND:20260831T193000Z
+SUMMARY:🔴 Osasuna vs Getafe (1-0)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882882@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART:20260912T141500Z
+DTEND:20260912T161500Z
+SUMMARY:🔴 Osasuna vs Espanyol (0-2)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882860@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART:20260919T120000Z
+DTEND:20260919T140000Z
+SUMMARY:🔴 Osasuna vs Rayo (1-1)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882840@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART:20261018T120000Z
+DTEND:20261018T140000Z
+SUMMARY:🔴 Osasuna vs Racing (2-0)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882811@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART:20261107T173000Z
+DTEND:20261107T193000Z
+SUMMARY:🔴 Osasuna vs Athletic
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882801@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART:20261122T173000Z
+DTEND:20261122T193000Z
+SUMMARY:🔴 Osasuna vs Málaga
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882781@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261208
+SUMMARY:⏳ Osasuna vs Elche (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882760@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20261218
+DTEND;VALUE=DATE:20261222
+SUMMARY:⏳ Osasuna vs Villarreal (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882740@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270112
+SUMMARY:⏳ Osasuna vs Barcelona (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882710@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270129
+DTEND;VALUE=DATE:20270202
+SUMMARY:⏳ Osasuna vs Deportivo (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882693@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270212
+DTEND;VALUE=DATE:20270216
+SUMMARY:⏳ Osasuna vs Atlético de Madrid (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882670@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270226
+DTEND;VALUE=DATE:20270302
+SUMMARY:⏳ Osasuna vs Sevilla (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882649@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270312
+DTEND;VALUE=DATE:20270316
+SUMMARY:⏳ Osasuna vs Celta (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882622@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270409
+DTEND;VALUE=DATE:20270413
+SUMMARY:⏳ Osasuna vs Real Madrid (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882602@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270420
+DTEND;VALUE=DATE:20270423
+SUMMARY:⏳ Osasuna vs Alavés (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882582@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270507
+DTEND;VALUE=DATE:20270511
+SUMMARY:⏳ Osasuna vs Real Sociedad (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882570@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270514
+DTEND;VALUE=DATE:20270518
+SUMMARY:⏳ Osasuna vs Betis (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:espn-401882549@osasuna-sadar
+DTSTAMP:20261022T180132Z
+DTSTART;VALUE=DATE:20270528
+DTEND;VALUE=DATE:20270601
+SUMMARY:⏳ Osasuna vs Valencia (sin horario)
+LOCATION:Estadio El Sadar\, Pamplona
+DESCRIPTION:LaLiga\nLaLiga aún no ha fijado día y hora. Se actualizará s
+ olo cuando se publique.
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
