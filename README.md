@@ -45,7 +45,11 @@ En la pestaña **Actions**, abre **Actualizar calendario** y pulsa **Run workflo
 - **Visibilidad:** la web es pública. Muestra nombres abreviados (Iker U.) y la asistencia. Los datos de partidos ya son públicos en FS5.
 - **Dependencia de FS5:** la API no es oficial para terceros. Si FS5 cambia su web, el script puede dejar de funcionar. En ese caso la web sigue mostrando los últimos datos guardados.
 
-## Extra personal: Osasuna en El Sadar
-Independiente de la web del equipo, que no lo enlaza ni lo usa. `scripts/osasuna.py` genera `docs/osasuna.ics` con los partidos de Osasuna como local en El Sadar (LaLiga y Copa del Rey) a partir de la API pública de ESPN. La Action **Calendario Osasuna** lo actualiza los miércoles y también se puede lanzar a mano.
+## Extra personal: Osasuna y Txorigorri
+Calendarios independientes de la web del equipo, que no los enlaza ni los usa. La Action **Calendarios personales** los actualiza cada día; si no hay cambios, no hace commit. También se puede lanzar a mano.
+
+**Osasuna en El Sadar** (`docs/osasuna.ics`, `scripts/osasuna.py`): partidos de Osasuna como local en El Sadar, en LaLiga y Copa del Rey. Los datos salen de la API pública de ESPN.
 - Partido con horario oficial: evento con su hora.
 - Jornada sin horario: evento de día completo de viernes a lunes (de martes a jueves si es entre semana). Cuando LaLiga fija la hora, ese mismo evento se convierte en uno con hora.
+
+**Txorigorri F.T.** (`docs/txorigorri.ics`, `scripts/txorigorri.py`): todos sus partidos en la Liga Fin de Semana de F7 Navarra. Los datos salen de la API pública de Playooz, la plataforma de f7navarra.com. La temporada que viene, cambia `EVENT_ID` y `EVENT_RUTA` en el script; `EVENT_ID` se obtiene de `https://api.playooz.com/public/event-header?eventRoute=<ruta>` con la cabecera `X-Tenant-Host: f7navarra.com`.

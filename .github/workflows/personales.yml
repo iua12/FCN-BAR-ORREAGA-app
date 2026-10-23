@@ -1,12 +1,12 @@
-name: Calendario Osasuna
+name: Calendarios personales
 
-# Calendario personal (Osasuna en El Sadar). Independiente del de FCN Bar Orreaga:
-# solo toca docs/osasuna.ics. Comparte grupo de concurrencia con "actualizar" para que
-# los dos no hagan push ni desplieguen Pages a la vez.
+# Calendarios personales (Osasuna en El Sadar y Txorigorri F7). Independientes del de
+# FCN Bar Orreaga: solo tocan docs/osasuna.ics y docs/txorigorri.ics. Comparte grupo de
+# concurrencia con "actualizar" para que no hagan push ni desplieguen Pages a la vez.
 on:
   schedule:
-    # Miércoles a las 10:23 (hora de Pamplona en invierno). LaLiga publica los horarios por bloques.
-    - cron: "23 9 * * 3"
+    # Todos los días a las 09:23 (hora de Pamplona en invierno). Sin cambios, no hace commit ni despliega.
+    - cron: "23 8 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -19,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  osasuna:
+  personales:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -31,19 +31,25 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Si una fuente falla, la otra se actualiza igualmente.
       - name: Descargar calendario de Osasuna
+        continue-on-error: true
         run: python scripts/osasuna.py
+
+      - name: Descargar calendario de Txorigorri
+        continue-on-error: true
+        run: python scripts/txorigorri.py
 
       - name: Guardar cambios
         id: guardar
         run: |
           git config user.name "orreaga-bot"
           git config user.email "orreaga-bot@users.noreply.github.com"
-          git add docs/osasuna.ics
+          git add docs/osasuna.ics docs/txorigorri.ics
           if git diff --cached --quiet; then
-            echo "Sin cambios en Osasuna"
+            echo "Sin cambios"
           else
-            git commit -m "Actualizar calendario Osasuna"
+            git commit -m "Actualizar calendarios personales"
             git pull --rebase origin main
             git push
             echo "cambios=1" >> "$GITHUB_OUTPUT"
