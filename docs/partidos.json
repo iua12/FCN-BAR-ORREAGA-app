@@ -115,7 +115,9 @@
    "estado": "programado",
    "goles_favor": null,
    "goles_contra": null,
-   "arbitros": [],
+   "arbitros": [
+    "A09 Adrián Roures"
+   ],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16814",
    "direccion": "Paseo de la Paz s/n, 31600-Burlada"
   },
@@ -424,5 +426,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-10-20T20:17:26Z"
+ "actualizado": "2026-10-24T06:56:47Z"
 }
