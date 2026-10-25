@@ -94,9 +94,9 @@
    "rival": "Diablo Academy",
    "campo_id": 22,
    "lugar": "Colegio Hilarión Eslava",
-   "estado": "programado",
-   "goles_favor": null,
-   "goles_contra": null,
+   "estado": "jugado",
+   "goles_favor": 6,
+   "goles_contra": 3,
    "arbitros": [
     "A05 Jose Javier Fernandez"
    ],
@@ -426,5 +426,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-10-24T06:56:47Z"
+ "actualizado": "2026-10-25T16:46:05Z"
 }
