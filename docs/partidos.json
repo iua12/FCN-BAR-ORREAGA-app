@@ -133,7 +133,9 @@
    "estado": "programado",
    "goles_favor": null,
    "goles_contra": null,
-   "arbitros": [],
+   "arbitros": [
+    "A46 Jaime Caparros Cavadas."
+   ],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16821",
    "direccion": "C/ San Raimundo s/n, trasera 31009-Pamplona , 42.801733495092435, -1.6718974203654333"
   },
@@ -426,5 +428,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-10-25T16:46:05Z"
+ "actualizado": "2026-10-28T17:02:31Z"
 }
