@@ -64,6 +64,10 @@
   "22": {
    "nombre": "Colegio Hilarión Eslava",
    "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+  },
+  "44": {
+   "nombre": "Colegio Amor de dios de Burlada",
+   "direccion": "Calle Larrainzar 2 de Burlada"
   }
  },
  "partidos": [
@@ -146,14 +150,14 @@
    "duracion": 50,
    "local": true,
    "rival": "Laguarreta",
-   "campo_id": 22,
-   "lugar": "Colegio Hilarión Eslava",
+   "campo_id": 44,
+   "lugar": "Colegio Amor de dios de Burlada",
    "estado": "programado",
    "goles_favor": null,
    "goles_contra": null,
    "arbitros": [],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16827",
-   "direccion": "Paseo de la Paz s/n, 31600-Burlada"
+   "direccion": "Calle Larrainzar 2 de Burlada"
   },
   {
    "id": 16834,
@@ -428,5 +432,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-10-28T17:02:31Z"
+ "actualizado": "2026-11-04T17:08:44Z"
 }
