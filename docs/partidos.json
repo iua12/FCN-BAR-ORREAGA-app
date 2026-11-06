@@ -155,7 +155,9 @@
    "estado": "programado",
    "goles_favor": null,
    "goles_contra": null,
-   "arbitros": [],
+   "arbitros": [
+    "A08 Miguel"
+   ],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16827",
    "direccion": "Calle Larrainzar 2 de Burlada"
   },
@@ -432,5 +434,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-11-04T17:08:44Z"
+ "actualizado": "2026-11-06T17:04:26Z"
 }
