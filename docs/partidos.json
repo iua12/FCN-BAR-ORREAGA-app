@@ -61,6 +61,10 @@
    "nombre": "SDC Echavacoiz",
    "direccion": "C/ San Raimundo s/n, trasera 31009-Pamplona , 42.801733495092435, -1.6718974203654333"
   },
+  "8": {
+   "nombre": "Polideportivo San Jorge",
+   "direccion": "Avda San Jorge s/n, 31012-San Jorge"
+  },
   "22": {
    "nombre": "Colegio Hilarión Eslava",
    "direccion": "Paseo de la Paz s/n, 31600-Burlada"
@@ -175,7 +179,7 @@
    "goles_contra": null,
    "arbitros": [],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16834",
-   "direccion": ""
+   "direccion": "Avda San Jorge s/n, 31012-San Jorge"
   },
   {
    "id": 16840,
@@ -434,5 +438,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-11-06T17:04:26Z"
+ "actualizado": "2026-11-07T07:16:36Z"
 }
