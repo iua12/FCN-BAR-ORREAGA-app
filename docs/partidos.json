@@ -120,9 +120,9 @@
    "rival": "Jalaman FC",
    "campo_id": 22,
    "lugar": "Colegio Hilarión Eslava",
-   "estado": "programado",
-   "goles_favor": null,
-   "goles_contra": null,
+   "estado": "jugado",
+   "goles_favor": 9,
+   "goles_contra": 3,
    "arbitros": [
     "A09 Adrián Roures"
    ],
@@ -438,5 +438,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-11-07T07:16:36Z"
+ "actualizado": "2026-11-08T16:51:37Z"
 }
