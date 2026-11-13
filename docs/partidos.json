@@ -177,7 +177,9 @@
    "estado": "programado",
    "goles_favor": null,
    "goles_contra": null,
-   "arbitros": [],
+   "arbitros": [
+    "A30 Koldo Ciaurriz"
+   ],
    "url": "https://www.fs5navarra.es/tournaments/143/matches/16834",
    "direccion": "Avda San Jorge s/n, 31012-San Jorge"
   },
@@ -438,5 +440,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-11-08T16:51:37Z"
+ "actualizado": "2026-11-13T17:08:31Z"
 }
