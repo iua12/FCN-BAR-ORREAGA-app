@@ -138,9 +138,9 @@
    "rival": "Perico Pin Pin",
    "campo_id": 2,
    "lugar": "SDC Echavacoiz",
-   "estado": "programado",
-   "goles_favor": null,
-   "goles_contra": null,
+   "estado": "jugado",
+   "goles_favor": 6,
+   "goles_contra": 3,
    "arbitros": [
     "A46 Jaime Caparros Cavadas."
    ],
@@ -440,5 +440,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-11-13T17:08:31Z"
+ "actualizado": "2026-11-15T16:54:25Z"
 }
