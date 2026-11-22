@@ -156,9 +156,9 @@
    "rival": "Laguarreta",
    "campo_id": 44,
    "lugar": "Colegio Amor de dios de Burlada",
-   "estado": "programado",
-   "goles_favor": null,
-   "goles_contra": null,
+   "estado": "jugado",
+   "goles_favor": 7,
+   "goles_contra": 12,
    "arbitros": [
     "A08 Miguel"
    ],
@@ -440,5 +440,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-11-15T16:54:25Z"
+ "actualizado": "2026-11-22T14:38:26Z"
 }
