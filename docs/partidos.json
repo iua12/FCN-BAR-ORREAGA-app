@@ -182,9 +182,9 @@
    "rival": "Ravenswood",
    "campo_id": 8,
    "lugar": "Polideportivo San Jorge",
-   "estado": "programado",
-   "goles_favor": null,
-   "goles_contra": null,
+   "estado": "jugado",
+   "goles_favor": 7,
+   "goles_contra": 5,
    "arbitros": [
     "A30 Koldo Ciaurriz"
    ],
@@ -448,5 +448,5 @@
    "direccion": ""
   }
  ],
- "actualizado": "2026-11-24T17:50:09Z"
+ "actualizado": "2026-11-28T15:35:37Z"
 }
